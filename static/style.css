@@ -232,3 +232,14 @@ i.menu-mobile {
     transform: translate3d(50px, 0, 0);
     }
 }
+
+.card.projetos:hover {
+    background-color: #c6dfff;
+    transition: 0.5s;
+}
+
+.badge:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+  transition: 0.2s;
+}

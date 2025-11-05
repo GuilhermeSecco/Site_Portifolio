@@ -28,35 +28,35 @@
         <nav id="navbar" class="nav-menu">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#inicio">
+                    <a class="nav-link active" aria-current="page" href="#inicio" onclick = ativarLink(this)>
                         <i class="bi bi-house" aria-hidden="true"></i>
                         Inicio
                     </a>
                 </li>
 
                  <li class="nav-item">
-                    <a class="nav-link" href="#sobre">
+                    <a class="nav-link" href="#sobre" onclick = ativarLink(this)>
                         <i class="bi bi-person" aria-hidden="true"></i>
                          Sobre
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#habilidades">
+                    <a class="nav-link" href="#habilidades" onclick = ativarLink(this)>
                         <i class="bi bi-list-check" aria-hidden="true"></i>
                         Habilidades
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#projetos">
+                    <a class="nav-link" href="#projetos" onclick = ativarLink(this)>
                         <i class ="bi bi-collection" aria-hidden="true"></i>
                          Projetos
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#contato">
+                    <a class="nav-link" href="#contato" onclick = ativarLink(this)>
                         <i class ="bi bi-envelope" aria-hidden="true"></i>
                          Contato
                     </a>
@@ -301,7 +301,7 @@
             </div>
         </section>
 
-        <section class="mt-5" id="projetos" data-anime="up">
+        <section class="mt-5" id="projetos" data-anime="left">
             <div class="container pb-5 pt-3">
 
                 <h1 class="pb-4">Projetos</h1>
@@ -311,11 +311,17 @@
                     <div class="carousel-item active" data-bs-interval='20000'>
                         <div class="row row-cols-1 row-cols-md-2 g-4">
                             <div class="col">
-                                <div class="card">
+                                <div class="card projetos">
                                 <img src="../static/img/Risco de Crédito.png" class="card-img-top" alt="Projeto de Risco de Crédito">
                                     <div class="card-body">
-                                        <h5 class="card-title">Risco de Crédito</h5>
-                                        <p class="card-text">Modelo de machine learning treinado para prever a probabilidade de um pedido de crédito ser uma fraude</p>
+                                        <div class="d-flex align-items-baseline flex-wrap mb-2"> 
+                                            <h5 class="card-title mb-0 me-2 ">Risco de Crédito</h5>
+                                                <span class="badge rounded-pill text-bg-primary align-self-end">Python</span>
+                                                <span class="badge rounded-pill text-bg-secondary align-self-end ms-1">Machine Learning</span>
+                                                <span class="badge rounded-pill text-bg-warning align-self-end ms-1">Power BI</span>
+                                                <span class="badge rounded-pill text-bg-info text-dark align-self-end ms-1">MySQL</span>
+                                        </div>
+                                        <p class="card-text">Modelo de machine learning treinado para prever a probabilidade de um pedido de crédito ser uma fraude.</p>
                                         <div class="d-flex justify-content-center">
                                             <a href="https://github.com/GuilhermeSecco/Risco-de-Credito-e-Fraude-em-Emprestimos" target="_blank"
                                                 class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
@@ -325,11 +331,15 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card">
+                                <div class="card projetos">
                                 <img src="../static/img/Dashboard_Uber.gif" class="card-img-top" alt="Projeto Analise de Dados Uber">
                                     <div class="card-body">
-                                        <h5 class="card-title mt-1">Análise de dados da Uber</h5>
-                                        <p class="card-text">O projeto utiliza SQL para responder perguntas de negócio e cria um relatório utilizando dashboards em Power BI </p>
+                                        <div class="d-flex align-items-baseline flex-wrap mt-1 mb-2">
+                                            <h5 class="card-title mb-0 me-2">Análise de dados da Uber</h5>
+                                                <span class="badge rounded-pill text-bg-success align-self-end">Excel</span>
+                                                <span class="badge rounded-pill text-bg-warning align-self-end ms-1">Power BI</span>
+                                        </div>
+                                        <p class="card-text">O projeto utiliza SQL para responder perguntas de negócio e cria um relatório utilizando dashboards em Power BI.</p>
                                         <div class="d-flex justify-content-center">
                                             <a href="https://github.com/GuilhermeSecco/Analise-Dados-Uber" target="_blank"
                                                 class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
@@ -343,10 +353,13 @@
                     <div class="carousel-item" data-bs-interval='20000'>
                         <div class="row row-cols-1 row-cols-md-2 g-4">
                             <div class="col">
-                                <div class="card">
+                                <div class="card projetos">
                                 <img src="../static/img/Excel_Dashboard.png" class="card-img-top mb-1" alt="Projeto de Risco de Crédito">
                                     <div class="card-body">
-                                        <h5 class="card-title mt-5">Análise de Receitas e Despesas Corporativas</h5>
+                                        <div class="d-flex align-items-baseline flex-wrap mt-5 mb-2">
+                                            <h5 class="card-title me-2 mb-0">Análise de Receitas e Despesas Corporativas</h5>
+                                                <span class="badge rounded-pill text-bg-success align-self-end">Excel</span>
+                                        </div>
                                         <p class="card-text">Limpeza e Tratamento de Dados, Acompanhamento de Indicadores e Dashboard com Excel.</p>
                                         <div class="d-flex justify-content-center">
                                             <a href="https://github.com/GuilhermeSecco/Analise-Receitas-e-Despesas-Excel" target="_blank"
@@ -357,10 +370,16 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card">
+                                <div class="card projetos">
                                 <img src="../static/img/Vagas_LinkedIN.gif" class="card-img-top" alt="Projeto Analise de Dados Uber">
                                     <div class="card-body">
-                                        <h5 class="card-title mt-1">JobScraper</h5>
+                                        <div class="d-flex align-items-baseline flex-wrap mt-1 mb-2">
+                                            <h5 class="card-title me-2 mb-0">JobScraper</h5>
+                                            <span class="badge rounded-pill text-bg-primary align-self-end">Python</span>
+                                            <span class="badge rounded-pill text-bg-danger align-self-end ms-1">Selenium</span>
+                                            <span class="badge rounded-pill text-bg-success align-self-end ms-1">Excel</span>
+                                            <span class="badge rounded-pill text-bg-warning align-self-end ms-1">Power BI</span>
+                                        </div>
                                         <p class="card-text">Automação com Selenium para coleta de vagas no LinkedIn e criação de dashboard analítico no Power BI.</p>
                                         <div class="d-flex justify-content-center">
                                             <a href="https://github.com/GuilhermeSecco/JobScraper-BI-Dashboard" target="_blank"

@@ -10,6 +10,16 @@ menuMobile.addEventListener('click', () =>{
     body.classList.toggle("menu-nav-active")
 })
 
+//Troca a aba ativa para a que foi clicada
+
+function ativarLink(linkClicado){
+    const linkAtivo = document.querySelectorAll('.nav-link.active');
+
+    linkAtivo.forEach(function(link) {
+        link.classList.remove('active');
+    })
+    linkClicado.classList.add('active');
+}
 
 /* Fecha o menu quando clicar em algum item e muda o icone para list */
 
@@ -32,7 +42,7 @@ const animeScroll = () => {
     const windowTop = window.pageYOffset + window.innerHeight * 0.85;
 
     item.forEach(element=>{
-        if (windowTop> element.offsetTop){
+        if (windowTop > element.offsetTop){
             element.classList.add('animate')
         }
         else{
