@@ -10,6 +10,14 @@ import os
 def index():
     return render_template('index.html')
 
+@app.route('/projetos')
+def projetos():
+    return render_template('projetos.html')
+
+@app.route('/projetos/risco-credito')
+def risco_credito():
+    return render_template('projetos/risco-credito.html')
+
 @app.route('/send', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
