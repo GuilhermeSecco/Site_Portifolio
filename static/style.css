@@ -206,8 +206,13 @@ i.menu-mobile {
   transition: 0.2s;
 }
 
-#btn-enviar-loader {
-    display: none
+#projetos_ver_todos {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#github-projects > div {
+  height: 100%;
 }
 
 #alerta {

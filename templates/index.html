@@ -304,8 +304,8 @@
         <section class="mt-5" id="projetos" data-anime="left">
             <div class="container pb-5 pt-3">
 
-                <h1 class="pb-4">Projetos</h1>
-
+                    <h1 class="pb-4">Projetos <a id="projetos_ver_todos" href="/projetos">Ver todos <i class="bi bi-arrow-up-right-square small"></i></a></h1>
+                
                 <div id="carouselProjetos" class="carousel slide carousel-dark" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval='20000'>
@@ -433,7 +433,6 @@
                 <h1 class="pt-3 pb-3">Contato</h1>
 
                 <div class="row">
-
                     <div class="col-12 col-md-5" data-anime="up">
                         <div class="card p-5 shadow border-0">
                             <div class="endereco">
@@ -448,7 +447,7 @@
                                     <i class="bi bi-envelope"></i>
                                     Email:
                                 </h4>
-                                <p data-anime="up">contato.guilhermesecco@gmail.com</p>
+                                <p data-anime="up">guilhermesecco.dev@gmail.com</p>
                             </div>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14760.576194151232!2d-49.06421543080326!3d-22.348189128348245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf
                                 6743bb4a1387%3A0x4d79212652a15cd6!2sAv.%20Get%C3%BAlio%20Vargas%20-%20Bauru%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1762298702826!5m2!1spt-BR!2sbr"
@@ -458,52 +457,9 @@
                             </iframe>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-7 mt-4 mt-md-0 mb-0" data-anime="up">
-                        <div class="card p-5 h-100 shadow border-0">
-                            <form class="row g-3" action='/send' method="POST">
-                                <div class="col-12 col-md-6" data-anime="up">
-                                    <label for="nome" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="nome"
-                                    name="nome" placeholder="Digite o seu nome" required>
-                                </div>
-                                <div class="col-12 col-md-6" data-anime="up">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email"
-                                    name="email" placeholder="Digite seu email" required>
-                                </div>
-                                <div class="col-12" data-anime="up">
-                                    <label for="mensagem" class="form-label">Mensagem</label>
-                                    <textarea type="text" class="form-control" id="mensagem"
-                                    placeholder="Digite sua mensagem" required
-                                    name="mensagem" rows="10"></textarea>
-                                </div>
-                                <div class="col-12 d-flex justify-content-center mt-4" data-anime="up">
-                                    <button id="btn-enviar" type="submit" class="btn btn-primary">Envio de Emails Não Está Disponível<br>Razão: API Fora do Ar</button>
-                                    <button id="btn-enviar-loader" class="btn btn-primary" type="button" disabled>
-                                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                                    <span role="status">Enviando...</span>
-                                </button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
-
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div id="alerta" class="alert alert-success alert-dismissible fade show" role="alert">
-                        <i class="bi bi-check-circle-fill"></i> {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"
-                        aria-label="Close"></button>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
     </main>
 
     <footer id="footer">

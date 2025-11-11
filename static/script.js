@@ -56,30 +56,3 @@ animeScroll()
 window.addEventListener("scroll", ()=>{
     animeScroll();
 })
-
-// Trocar o botão "Enviar Mensagem" pelo "Enviando"
-
-const btnEnviar = document.querySelector('#btn-enviar')
-const btnEnviarLoader = document.querySelector('#btn-enviar-loader')
-const inputNome = document.querySelector('#nome');
-const inputEmail = document.querySelector('#email');
-const textareaMensagem = document.querySelector('#mensagem');
-
-btnEnviar.addEventListener("click", () => {
-    const nome = inputNome.value.trim();
-    const email = inputEmail.value.trim();
-    const mensagem = textareaMensagem.value.trim();
-    if (nome === '' || email === '' || mensagem === '') {
-        return;
-    }
-    else {
-    btnEnviarLoader.style.display = "block";
-    btnEnviar.style.display = "none";
-    }
-})
-
-// Tirar a mensagem de sucesso depois de 5 segundos
-
-setTimeout(() => {
-    document.querySelector('#alerta').style.display = 'none';
-}, 5000)
