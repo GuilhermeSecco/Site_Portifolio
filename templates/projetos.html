@@ -76,7 +76,7 @@
                 <h5 class="card-title text-light fw-bold">${repo.name.replace(/-/g, ' ')}</h5>
                 <div class="mb-3">
                   ${repo.topics
-                    .filter(t => t.toLowerCase() !== "portfolio-project" || "portfolio-demo")
+                    .filter(t => t.toLowerCase() !== "portfolio-project" && t.toLowerCase() !== "portfolio-demo")
                     .map(t => `
                       <span class="badge text-shadow bg-${coresTopicos[t.toLowerCase()] || 'secondary'} me-1">
                         ${formatarTopico(t)}
